@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>Hubis Bot™</title>
+ <script>
+G-XJEBMPGQLL
+</script>
 
     <style>
         body {
@@ -31,64 +34,8 @@
             text-decoration: underline;
         }
     </style>
-</head>
 
-    <button onclick="toggleTheme()" style="padding:10px; margin-top:20px;">
-    🌗 Zmień tryb
-</button>
 
-<script>
-function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + (days*24*60*60*1000));
-    document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
-}
-
-function getCookie(name) {
-    const cname = name + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(';');
-
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i].trim();
-        if (c.indexOf(cname) == 0) {
-            return c.substring(cname.length, c.length);
-        }
-    }
-    return "";
-}
-
-function applyTheme(theme) {
-    if (theme === "dark") {
-        document.body.style.backgroundColor = "#0f1117";
-        document.body.style.color = "white";
-    } else {
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
-    }
-}
-
-function toggleTheme() {
-    let current = getCookie("theme");
-
-    if (current === "dark") {
-        setCookie("theme", "light", 30);
-        applyTheme("light");
-    } else {
-        setCookie("theme", "dark", 30);
-        applyTheme("dark");
-    }
-}
-
-// 🔥 ładowanie zapisanej opcji
-window.onload = function() {
-    let saved = getCookie("theme");
-    if (saved) {
-        applyTheme(saved);
-    } else {
-        applyTheme("dark"); // domyślny
-    }
-}
 </script>
 <body>
 
