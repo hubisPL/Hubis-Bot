@@ -63,6 +63,14 @@ function searchPage() {
     document.getElementById("message").innerText = "Nie znaleziono ";
 </script>
 
+<script>
+document.getElementById("search").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        searchPage();
+    }
+});
+</script>
+
     <h1>Hubis Bot™</h1>
 
     <div class="box">
